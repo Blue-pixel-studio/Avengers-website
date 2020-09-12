@@ -1,0 +1,110 @@
+<mat-drawer-container class="example-container" autosize>
+    <mat-drawer class="sidenav-fixed" mode="over" position="end" #snav>
+        <i (click)="snav.toggle()" class="fa fa-times" aria-hidden="true"></i>
+
+        <div class="side-menu">
+            <ul>
+                <li (click)="onClick('mob-HomeID')">Home</li>
+                <li (click)="onClick('mob-GalleryID')">Gallery</li>
+                <li (click)="onClick('mob-ContactID')">Contact</li>
+            </ul>
+        </div>
+    </mat-drawer>
+    <mat-drawer-content>
+
+
+
+        <div class="container desktop">
+            <nav class="navbar fixed-top   ">
+                <a class="navbar-brand" (click)="onClick('HomeID')">
+                    <img src="./assets/images/avengers-png-logo-4979-128x128.ico" alt="logo">
+                </a>
+
+                <div class="menus ">
+                    <ul>
+                        <li><a class="navbar-menu" (click)="onClick('HomeID')">Home</a></li>
+                        <li><a class="navbar-menu" (click)="onClick('GalleryID')">Gallery</a></li>
+                        <li><a class="navbar-menu" (click)="onClick('ContactID')">Contact</a></li>
+                    </ul>
+                </div>
+
+
+            </nav>
+        </div>
+
+        <div class="container tab">
+            <nav class="navbar fixed-top   ">
+                <a class="navbar-brand" (click)="onClick('tab-HomeID')">
+                    <img src="./assets/images/avengers-png-logo-4979-128x128.ico" alt="logo">
+                </a>
+
+
+
+                <div class="menus tab">
+                    <ul>
+                        <li><a class="navbar-menu" (click)="onClick('tab-HomeID')">Home</a></li>
+                        <li><a class="navbar-menu" (click)="onClick('tab-GalleryID')">Gallery</a></li>
+                        <li><a class="navbar-menu" (click)="onClick('tab-ContactID')">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+
+        <div class="container mobile">
+            <nav class="navbar fixed-top  navbar-light bg-light ">
+                <a class="navbar-brand" (click)="onClick('mob-HomeID')">
+                    <img src="./assets/images/avengers-png-logo-4979-128x128.ico" alt="logo">
+                </a>
+
+
+
+                <i (click)="snav.toggle()" class=" fa fa-bars " aria-hidden="true "></i>
+
+
+            </nav>
+        </div>
+
+
+
+
+
+
+        <div class="content " fxLayout="column " fxFlex>
+            <app-home></app-home>
+            <app-gallery fxLayout="column "></app-gallery>
+            <app-contact fxLayout="column "></app-contact>
+
+        </div>
+
+
+    </mat-drawer-content>
+</mat-drawer-container>
+
+<div class="footer desktop ">
+    <div class="container ">
+        <div class="row ">
+            <div class="cta ">
+                Designed and Developed by Blue Pixel Studio.
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- <div class="mob-footer mobile ">
+
+    <div class="row ">
+        <p> Designed and Developed by Blue Pixel Studio.</p>
+    </div>
+</div> -->
+
+
+<div class="mob-footer mobile ">
+
+    <p>Designed and Developed by Blue Pixel Studio.</p>
+</div>
+
+
+<!-- <router-outlet></router-outlet> -->
