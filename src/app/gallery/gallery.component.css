@@ -23,7 +23,7 @@
     position: relative;
     width: 700px;
     height: 300px;
-    object-fit: none;
+    object-fit: fill;
 }
 
 .img-2:first-child {
@@ -45,7 +45,7 @@
 .img-2>img {
     width: 345px;
     height: 290px;
-    object-fit: cover;
+    object-fit: fill;
 }
 
 .img-3>img {
@@ -97,8 +97,8 @@
 
 .img-6>img {
     position: relative;
-    right: 80px;
-    width: 800px;
+    right: 0px;
+    width: 700px;
     height: 450px;
     object-fit: cover;
 }

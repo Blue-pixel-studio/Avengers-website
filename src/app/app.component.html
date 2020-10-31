@@ -4,9 +4,9 @@
 
         <div class="side-menu">
             <ul>
-                <li (click)="onClick('mob-HomeID')">Home</li>
-                <li (click)="onClick('mob-GalleryID')">Gallery</li>
-                <li (click)="onClick('mob-ContactID')">Contact</li>
+                <li [ngClass]="{'navbar-active': isActive == 0}" (click)="onClick('mob-HomeID',0)">Home</li>
+                <li [ngClass]="{'navbar-active': isActive == 1}" (click)="onClick('mob-GalleryID',1)">Gallery</li>
+                <li [ngClass]="{'navbar-active': isActive == 2}" (click)="onClick('mob-ContactID',2)">Contact</li>
             </ul>
         </div>
     </mat-drawer>
@@ -14,56 +14,53 @@
 
 
 
-        <div class="container desktop">
-            <nav class="navbar fixed-top   ">
-                <a class="navbar-brand" (click)="onClick('HomeID')">
-                    <img src="./assets/images/avengers-png-logo-4979-128x128.ico" alt="logo">
+            <nav class="navbar fixed-top   desktop">
+                <a class="navbar-brand" (click)="onClick('HomeID',0)">
+                    <img src="assets/images/avengers logo.png" alt="logo">
                 </a>
 
                 <div class="menus ">
                     <ul>
-                        <li><a class="navbar-menu" (click)="onClick('HomeID')">Home</a></li>
-                        <li><a class="navbar-menu" (click)="onClick('GalleryID')">Gallery</a></li>
-                        <li><a class="navbar-menu" (click)="onClick('ContactID')">Contact</a></li>
+
+                        <li ><a class="navbar-menu" [ngClass]="{'navbar-active': isActive == 0}"  (click)="onClick('HomeID',0)">Home</a></li>
+                        <li ><a class="navbar-menu" [ngClass]="{'navbar-active': isActive == 1}"  (click)="onClick('GalleryID',1)">Gallery</a></li>
+                        <li ><a class="navbar-menu" [ngClass]="{'navbar-active': isActive == 2}"  (click)="onClick('ContactID',2)">Contact</a></li>
                     </ul>
                 </div>
 
 
             </nav>
-        </div>
 
         <div class="container tab">
             <nav class="navbar fixed-top   ">
-                <a class="navbar-brand" (click)="onClick('tab-HomeID')">
-                    <img src="./assets/images/avengers-png-logo-4979-128x128.ico" alt="logo">
+                <a class="navbar-brand" (click)="onClick('tab-HomeID',0)">
+                    <img src="assets/images/avengers logo.png" alt="logo">
                 </a>
 
 
 
                 <div class="menus tab">
                     <ul>
-                        <li><a class="navbar-menu" (click)="onClick('tab-HomeID')">Home</a></li>
-                        <li><a class="navbar-menu" (click)="onClick('tab-GalleryID')">Gallery</a></li>
-                        <li><a class="navbar-menu" (click)="onClick('tab-ContactID')">Contact</a></li>
+                        <li><a [ngClass]="{'navbar-active': isActive == 0}" class="navbar-menu" (click)="onClick('tab-HomeID', 0)">Home</a></li>
+                        <li><a [ngClass]="{'navbar-active': isActive == 1}" class="navbar-menu" (click)="onClick('tab-GalleryID',1)">Gallery</a></li>
+                        <li><a [ngClass]="{'navbar-active': isActive == 2}" class="navbar-menu" (click)="onClick('tab-ContactID', 2)">Contact</a></li>
                     </ul>
                 </div>
             </nav>
         </div>
 
 
-        <div class="container mobile">
-            <nav class="navbar fixed-top  navbar-light bg-light ">
-                <a class="navbar-brand" (click)="onClick('mob-HomeID')">
-                    <img src="./assets/images/avengers-png-logo-4979-128x128.ico" alt="logo">
+            <nav class="navbar fixed-top  mobile navbar-light bg-light ">
+                <a class="navbar-brand" (click)="onClick('mob-HomeID',0)">
+                    <img src="assets/images/avengers logo.png" alt="logo">
                 </a>
 
 
-
                 <i (click)="snav.toggle()" class=" fa fa-bars " aria-hidden="true "></i>
-
-
+                <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>    -->
             </nav>
-        </div>
 
 
 

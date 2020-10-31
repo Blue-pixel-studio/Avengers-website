@@ -70,7 +70,7 @@
             flex-direction: column;
             flex-wrap: wrap;
         }
-        .img-8>img {
+        .img-8>iframe {
             position: relative;
             right: -150px;
             width: 500px;
@@ -135,7 +135,7 @@
     }
     
     @media only screen and (max-width: 800px) {
-        .mob-img-8>img {
+        .mob-img-8>iframe {
             width: 100%;
         }
         .Heading {
