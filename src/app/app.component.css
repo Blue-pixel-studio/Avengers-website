@@ -220,6 +220,7 @@ li {
         width: 40%;
         height: 100px;
         /* text-align: center; */
+        
     }
     .mob-footer {
         background-color: #F74342;
@@ -266,11 +267,14 @@ li {
     }
     .flex-box{
         display: flex;
-        /* grid-template-columns: auto auto; */
         flex-direction: row;
         flex-wrap: nowrap;
-        justify-content: space-between;
+        justify-content: space-evenly !important;
         align-items: center;
+        
     }
+
+   
+    
 
 }
