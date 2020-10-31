@@ -1,5 +1,6 @@
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
+import { APP_BASE_HREF, LocationStrategy, HashLocationStrategy } from '@angular/common';
 
 import { AppComponent } from './app.component';
 // import { HomeComponent } from './home/home.component';
@@ -27,7 +28,10 @@ import { MatButtonModule } from '@angular/material/button';
     MatSidenavModule
   ],
   exports:[MatButtonModule, MatIconModule, MatSidenavModule],
-  providers: [],
+  providers: [
+    { provide: APP_BASE_HREF, useValue: '/'  },
+    { provide: LocationStrategy, useClass: HashLocationStrategy },  
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
