@@ -13,7 +13,7 @@ mat-drawer-content {
 
 mat-drawer {
     background-color: #F74342;
-    width: 50%;
+    /* width: 50%; */
     overflow: hidden !important;
 }
 
@@ -250,7 +250,7 @@ li {
     }
     mat-drawer {
         background-color: #F74342;
-        width: 50%;
+        /* width: 50%; */
         overflow: hidden !important;
     }
     .side-menu {
@@ -264,4 +264,13 @@ li {
         /* margin-top: 15px; */
         color: white;
     }
+    .flex-box{
+        display: flex;
+        /* grid-template-columns: auto auto; */
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
 }
